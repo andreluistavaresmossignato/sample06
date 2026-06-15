@@ -1,31 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
 .painel {
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #f5f5f5;
+  align-items: center;
+  gap: 24px;
+
+  background:
+    radial-gradient(circle at top left, #7c3aed 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #0891b2 0%, transparent 35%),
+    #0f172a;
 }
 
 .titulo {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: black;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #c4b5fd,
+    #67e8f9
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .botao {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
   border: none;
-  border-radius: 0.25rem;
+  outline: none;
+
+  padding: 14px 28px;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+
   cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
 }
 
 .botao:hover {
-  background-color: #0056b3; /* Opcional: melhora a experiência ao passar o mouse */
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.contador-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.titulo {
+  font-size: clamp(4rem, 10vw, 7rem);
+  line-height: 1;
 }
